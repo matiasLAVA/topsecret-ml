@@ -1,0 +1,12 @@
+com/satellite/service/impl/SatelliteServiceImpl.class
+com/satellite/SatelliteApp.class
+com/satellite/dto/SatellitePayloadDTO$SatellitePayloadDTOBuilder.class
+com/satellite/dto/SatellitePayloadDTO.class
+com/satellite/enums/SatelliteEnum.class
+com/satellite/dto/SatelliteDTO$SatelliteDTOBuilder.class
+com/satellite/constant/EndpointConstant.class
+com/satellite/service/SatelliteService.class
+com/satellite/dto/SatelliteDTO.class
+com/satellite/bean/SatelliteBean.class
+com/satellite/bean/SatelliteBean$SatelliteBeanBuilder.class
+com/satellite/resource/SatelliteResource.class

@@ -1,0 +1,18 @@
+#Tomcat Embedded Server Configuration
+server:
+  port: ${PORT:8001}
+spring:
+  jmx:
+    default-domain: satellite
+  application:
+    name: satellite
+
+eureka:
+  instance:
+    homePageUrl: ${microservice.host.name}:${server.port}
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${eureka.hostname}/eureka
+      non-secure-port: 80
+      secure-port: 443

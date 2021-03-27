@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  run:
+    expose:
+      - '8761'
+    ports:
+      - '8761:8087'
+    container_name: eurekaserver
+    image: eurekaserver:latest
