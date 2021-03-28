@@ -38,7 +38,7 @@ public class TopSecretSplitServiceImpl implements TopSecretSplitService {
 
     @Override
     public void createSatellite(String satelliteName, SatelliteSplitPayloadDTO satelliteSplitPayloadDTO) {
-        log.info("creating the satellite");
+        log.info("creating the satellite to database");
 
         try {
             InstanceInfo ins = discoveryClient.getNextServerFromEureka("satellite",false);
