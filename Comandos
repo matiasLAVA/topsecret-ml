@@ -1,0 +1,20 @@
+VER LOS LOGS
+heroku logs -t -a satellite-topsecret
+STOP APP
+heroku ps:scale web=0 --app satellite-topsecret
+START APP
+heroku ps:scale web=1 --app satellite-topsecret
+heroku ps
+
+heroku apps:rename satellite-ml --app 
+heroku apps:rename eureka-ml --app 
+heroku apps:rename topsecret-ml --app
+
+heroku apps:destroy satellite-ml --confirm satellite-ml
+heroku apps:destroy eureka-ml --confirm eureka-ml
+heroku apps:destroy topsecret-ml --confirm topsecret-ml
+
+
+heroku config:set PORT_EUREKA=8761
+
+

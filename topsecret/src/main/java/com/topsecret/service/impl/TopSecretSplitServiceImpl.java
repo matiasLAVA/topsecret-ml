@@ -42,7 +42,7 @@ public class TopSecretSplitServiceImpl implements TopSecretSplitService {
 
         try {
             InstanceInfo ins = discoveryClient.getNextServerFromEureka("satellite",false);
-
+            log.info("satellite url: " + ins.getHomePageUrl());
             Mono<String> resultMono = webClient.post()
                     .uri( ins.getHomePageUrl().concat(EndpointConstant.SATELLITE).concat("/").concat(satelliteName))
                     .body(Mono.just(satelliteSplitPayloadDTO), SatelliteSplitPayloadDTO.class)
@@ -73,6 +73,7 @@ public class TopSecretSplitServiceImpl implements TopSecretSplitService {
 
         try {
             InstanceInfo ins = discoveryClient.getNextServerFromEureka("satellite",false);
+            log.info("satellite url: " + ins.getHomePageUrl());
             return webClient.get()
                     .uri(ins.getHomePageUrl().concat(EndpointConstant.SATELLITE))
                     .retrieve()
