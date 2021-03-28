@@ -1,4 +1,4 @@
-# For Java 8, try this
+# For Java 8, try this p
 FROM openjdk:8-jdk-alpine
 ARG JAR_FILE=target/topsecret-1.0-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
