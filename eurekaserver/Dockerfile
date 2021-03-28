@@ -2,4 +2,4 @@
 FROM openjdk:8-jdk-alpine
 ARG JAR_FILE=target/eurekaserver-1.0.0-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Dserver.port=$PORT","-Dspring.profiles.active=prod", "-jar","app.jar"]
+ENTRYPOINT ["java","-Dserver.port=$PORT","-Dspring.profiles.active=prod","-Xmx300m -Xms300m","-jar","app.jar"]
